@@ -11,8 +11,8 @@ export function Footer() {
           <p className="mt-4">SpotCargoHub - digitales Tagespreismanagement fuer Transporteinkauf.</p>
         </div>
         <div className="flex flex-col gap-2 md:items-end">
-          <a className="font-medium text-[var(--color-brand)]" href="mailto:hello@spotcargohub.com">
-            hello@spotcargohub.com
+          <a className="font-medium text-[var(--color-brand)]" href="mailto:hallo@spotcargohub.com">
+            hallo@spotcargohub.com
           </a>
           <a href="#">Fuer Speditionen</a>
         </div>

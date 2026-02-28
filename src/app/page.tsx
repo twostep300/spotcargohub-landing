@@ -11,7 +11,7 @@ export default function Home() {
         "@type": "Organization",
         name: "SpotCargoHub",
         url: "https://spotcargohub.com",
-        email: "hello@spotcargohub.com",
+        email: "hallo@spotcargohub.com",
       },
       {
         "@type": "SoftwareApplication",
