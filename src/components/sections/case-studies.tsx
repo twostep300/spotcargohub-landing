@@ -8,16 +8,19 @@ type CaseStudiesSectionProps = {
 function CaseVisual({ dark = false }: { dark?: boolean }) {
   return (
     <div className={`rounded-3xl p-4 ${dark ? "bg-[rgba(255,255,255,0.06)]" : "bg-[var(--color-surface)]"}`}>
-      <div className="grid grid-cols-3 gap-2">
-        <div className={`h-12 rounded-2xl ${dark ? "bg-white/10" : "bg-white"}`} />
-        <div className={`h-12 rounded-2xl ${dark ? "bg-white/10" : "bg-white"}`} />
-        <div className={`h-12 rounded-2xl ${dark ? "bg-white/10" : "bg-white"}`} />
-      </div>
-      <div className={`mt-4 rounded-3xl p-4 ${dark ? "bg-white/5" : "bg-white"}`}>
-        <div className={`h-3 w-3/4 rounded-full ${dark ? "bg-white/50" : "bg-[rgba(23,19,16,0.18)]"}`} />
-        <div className={`mt-2 h-3 w-1/2 rounded-full ${dark ? "bg-white/30" : "bg-[rgba(23,19,16,0.12)]"}`} />
-        <div className="mt-4 h-20 rounded-2xl bg-[linear-gradient(135deg,_rgba(254,195,58,0.22)_0%,_rgba(239,139,44,0.18)_100%)]" />
-      </div>
+      <svg className="h-36 w-full" fill="none" viewBox="0 0 320 144" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="18" width="304" height="96" rx="24" fill={dark ? "rgba(255,255,255,0.08)" : "white"} />
+        <rect x="28" y="38" width="82" height="56" rx="16" fill={dark ? "rgba(255,255,255,0.12)" : "#F6EFE4"} />
+        <rect x="126" y="38" width="166" height="14" rx="7" fill={dark ? "rgba(255,255,255,0.42)" : "#E7D8C4"} />
+        <rect x="126" y="61" width="122" height="12" rx="6" fill={dark ? "rgba(255,255,255,0.24)" : "rgba(23,19,16,0.12)"} />
+        <rect x="126" y="81" width="148" height="12" rx="6" fill={dark ? "rgba(255,255,255,0.18)" : "rgba(23,19,16,0.08)"} />
+        <path d="M42 80L58 60L76 70L94 48" stroke="#EF8B2C" strokeLinecap="round" strokeLinejoin="round" strokeWidth="6" />
+        <circle cx="42" cy="80" r="4" fill="#FEC33A" />
+        <circle cx="58" cy="60" r="4" fill="#FEC33A" />
+        <circle cx="76" cy="70" r="4" fill="#FEC33A" />
+        <circle cx="94" cy="48" r="4" fill="#FEC33A" />
+        <path d="M22 124H298" stroke={dark ? "rgba(255,255,255,0.12)" : "#E7D8C4"} strokeLinecap="round" strokeWidth="4" />
+      </svg>
     </div>
   );
 }

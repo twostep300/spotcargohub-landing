@@ -15,7 +15,6 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { CaseStudiesSection } from "@/components/sections/case-studies";
 import { TestimonialSection } from "@/components/sections/testimonial";
 import { BookingSection } from "@/components/sections/booking";
-import { FaqSection } from "@/components/sections/faq";
 import { FinalCtaSection } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 import { Modal } from "@/components/ui/modal";
@@ -75,11 +74,6 @@ export function LandingPage({ heroVariant }: LandingPageProps) {
           calendlyOpen={calendlyOpen}
           onCloseCalendly={() => setCalendlyOpen(false)}
           onOpenCalendly={() => setCalendlyOpen(true)}
-        />
-        <FaqSection />
-        <CtaBand
-          description="Der naechste Schritt bleibt bewusst einfach und ohne Reibung."
-          title="Noch offen? Dann starten Sie Ihren Test in 5 Minuten."
         />
         <FinalCtaSection />
       </main>

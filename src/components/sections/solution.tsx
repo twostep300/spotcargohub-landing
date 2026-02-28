@@ -32,30 +32,36 @@ export function SolutionSection() {
               className="rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-white p-6 shadow-[var(--shadow-sm)]"
               key={card.title}
             >
-              <div className="mb-5 rounded-3xl bg-[var(--color-surface)] p-4">
+              <div className="mb-5 rounded-3xl bg-[linear-gradient(135deg,_#fffdfa_0%,_#f6efe4_100%)] p-4">
                 {card.visual === "grid" ? (
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="h-12 rounded-2xl bg-white" />
-                    <div className="h-12 rounded-2xl bg-white" />
-                    <div className="h-12 rounded-2xl bg-white" />
-                  </div>
+                  <svg className="h-16 w-full" fill="none" viewBox="0 0 220 64" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="10" width="66" height="42" rx="14" fill="white" />
+                    <rect x="77" y="10" width="66" height="42" rx="14" fill="white" />
+                    <rect x="152" y="10" width="66" height="42" rx="14" fill="white" />
+                    <rect x="18" y="24" width="34" height="6" rx="3" fill="#E7D8C4" />
+                    <rect x="93" y="24" width="34" height="6" rx="3" fill="#E7D8C4" />
+                    <rect x="168" y="24" width="34" height="6" rx="3" fill="#E7D8C4" />
+                  </svg>
                 ) : null}
                 {card.visual === "flow" ? (
-                  <div className="flex items-center gap-2">
-                    <div className="h-10 flex-1 rounded-2xl bg-white" />
-                    <span className="text-[var(--color-accent-strong)]">→</span>
-                    <div className="h-10 flex-1 rounded-2xl bg-white" />
-                    <span className="text-[var(--color-accent-strong)]">→</span>
-                    <div className="h-10 flex-1 rounded-2xl bg-white" />
-                  </div>
+                  <svg className="h-16 w-full" fill="none" viewBox="0 0 220 64" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="16" width="48" height="32" rx="12" fill="white" />
+                    <rect x="86" y="16" width="48" height="32" rx="12" fill="white" />
+                    <rect x="166" y="16" width="48" height="32" rx="12" fill="white" />
+                    <path d="M60 32H80" stroke="#EF8B2C" strokeLinecap="round" strokeWidth="4" />
+                    <path d="M140 32H160" stroke="#EF8B2C" strokeLinecap="round" strokeWidth="4" />
+                    <path d="M75 24L83 32L75 40" stroke="#EF8B2C" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
+                    <path d="M155 24L163 32L155 40" stroke="#EF8B2C" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
+                  </svg>
                 ) : null}
                 {card.visual === "chart" ? (
-                  <div className="flex h-12 items-end gap-2">
-                    <div className="h-4 w-full rounded-t-2xl bg-white" />
-                    <div className="h-7 w-full rounded-t-2xl bg-white" />
-                    <div className="h-10 w-full rounded-t-2xl bg-white" />
-                    <div className="h-12 w-full rounded-t-2xl bg-white" />
-                  </div>
+                  <svg className="h-16 w-full" fill="none" viewBox="0 0 220 64" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="34" width="28" height="18" rx="8" fill="white" />
+                    <rect x="64" y="26" width="28" height="26" rx="8" fill="white" />
+                    <rect x="108" y="18" width="28" height="34" rx="8" fill="white" />
+                    <rect x="152" y="10" width="28" height="42" rx="8" fill="white" />
+                    <path d="M18 16C42 24 72 26 92 18C112 10 144 18 182 8" stroke="#EF8B2C" strokeLinecap="round" strokeWidth="4" />
+                  </svg>
                 ) : null}
               </div>
               <h3 className="text-xl font-semibold text-[var(--color-ink)]">{card.title}</h3>

@@ -6,7 +6,7 @@ const brands = [
   { name: "Siemens", src: "https://cdn.simpleicons.org/siemens/171310" },
   { name: "Airbus", src: "https://cdn.simpleicons.org/airbus/171310" },
   { name: "Volkswagen", src: "https://cdn.simpleicons.org/volkswagen/171310" },
-  { name: "Maersk", src: "https://cdn.simpleicons.org/maersk/171310" },
+  { name: "SAP", src: "https://cdn.simpleicons.org/sap/171310" },
 ];
 
 export function SocialProof() {
@@ -31,7 +31,6 @@ export function SocialProof() {
             </div>
           ))}
         </div>
-        <p className="mt-4 text-sm text-[var(--color-ink-soft)]">Beispiel-Logos als Platzhalter fuer Referenzen.</p>
       </div>
     </section>
   );

@@ -1,10 +1,9 @@
-import { Button, primaryCtaLabel } from "@/components/ui/button";
 export function HowItWorksSection() {
   const steps = [
-    ["Step 1", "Anfrage erstellen"],
-    ["Step 2", "Speditionskreis waehlen"],
-    ["Step 3", "Angebote vergleichen"],
-    ["Step 4", "Vergeben"],
+    "Anfrage erstellen",
+    "Speditionskreis waehlen",
+    "Angebote vergleichen",
+    "Vergeben",
   ];
 
   return (
@@ -14,25 +13,21 @@ export function HowItWorksSection() {
           So funktioniert&apos;s in 4 Schritten
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-4">
-          {steps.map(([label, title], index) => (
+          {steps.map((title, index) => (
             <div
               className="rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-white px-5 py-5 shadow-[var(--shadow-sm)]"
-              key={label}
+              key={title}
             >
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)] text-sm font-bold text-[var(--color-ink)]">
                   {index + 1}
                 </span>
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-muted)]">{label}</p>
-                  <p className="mt-1 text-sm font-semibold text-[var(--color-ink)]">{title}</p>
+                  <p className="text-sm font-semibold text-[var(--color-ink)]">{title}</p>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-        <div className="mt-8">
-          <Button href="#booking">{primaryCtaLabel}</Button>
         </div>
       </div>
     </section>

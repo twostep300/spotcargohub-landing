@@ -43,7 +43,7 @@ export function PainSection() {
             </div>
           </div>
         </div>
-        <div className="grid gap-4">
+        <div className="grid gap-4 lg:pt-16">
           {items.map(([icon, primary, secondary]) => (
             <div
               className="rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-white p-5 shadow-[var(--shadow-sm)]"
