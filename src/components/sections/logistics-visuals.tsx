@@ -10,23 +10,61 @@ function VideoStyleCard() {
             </span>
             <span className="text-xs font-medium text-[rgba(255,255,255,0.7)]">90 Sek. Produktblick</span>
           </div>
-          <div className="flex items-center gap-5">
-            <div className="flex h-18 w-18 items-center justify-center rounded-full bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)] text-[var(--color-ink)] shadow-[var(--shadow-glow)]">
-              <span className="ml-1 text-2xl">▶</span>
-            </div>
+          <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="text-2xl font-semibold tracking-[-0.03em]">Wie der Prozess in der Praxis aussieht</p>
+              <div className="flex h-18 w-18 items-center justify-center rounded-full bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)] text-[var(--color-ink)] shadow-[var(--shadow-glow)]">
+                <span className="ml-1 text-2xl">▶</span>
+              </div>
+              <p className="mt-5 text-2xl font-semibold tracking-[-0.03em]">Wie der Prozess in der Praxis aussieht</p>
               <p className="mt-2 max-w-md text-sm leading-7 text-[rgba(255,255,255,0.78)]">
-                Ein visueller Eindruck statt mehr Text: Anfrage, Angebotsvergleich und Vergabe in einem klaren Flow.
+                Eine Demo-Ansicht wie in einem echten Backend: Anfrage, Angebotsvergleich und Vergabe in einem klaren Flow.
               </p>
             </div>
-          </div>
-          <div className="grid grid-cols-3 gap-3">
-            {["Route", "Angebote", "Vergabe"].map((item) => (
-              <div className="rounded-2xl bg-[rgba(255,255,255,0.08)] px-3 py-3 text-center text-xs font-semibold uppercase tracking-[0.14em]" key={item}>
-                {item}
+            <div className="rounded-[26px] border border-[rgba(255,255,255,0.12)] bg-[rgba(10,8,7,0.38)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex gap-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-white/80" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-white/30" />
+                </div>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[rgba(255,255,255,0.56)]">
+                  Demo Player
+                </span>
               </div>
-            ))}
+              <div className="rounded-3xl bg-[rgba(255,255,255,0.04)] p-4">
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {["Anfrage", "Angebote", "Vergabe"].map((item) => (
+                    <div className="rounded-2xl bg-[rgba(255,255,255,0.08)] px-3 py-3 text-center text-xs font-semibold uppercase tracking-[0.14em]" key={item}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 grid gap-3 lg:grid-cols-[0.9fr_1.1fr]">
+                  <div className="space-y-3 rounded-2xl bg-[rgba(255,255,255,0.05)] p-3">
+                    <div className="h-3 w-3/4 rounded-full bg-white/70" />
+                    <div className="h-3 w-2/3 rounded-full bg-white/40" />
+                    <div className="h-22 rounded-2xl bg-[linear-gradient(180deg,_rgba(255,255,255,0.08)_0%,_rgba(255,255,255,0.03)_100%)]" />
+                  </div>
+                  <div className="space-y-2 rounded-2xl bg-[rgba(255,255,255,0.05)] p-3">
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="h-12 rounded-2xl bg-white/10" />
+                      <div className="h-12 rounded-2xl bg-white/10" />
+                      <div className="h-12 rounded-2xl bg-white/10" />
+                    </div>
+                    <div className="h-3 rounded-full bg-white/50" />
+                    <div className="h-3 w-5/6 rounded-full bg-white/35" />
+                    <div className="h-3 w-2/3 rounded-full bg-white/25" />
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center gap-3">
+                  <span className="text-xs font-medium text-[rgba(255,255,255,0.74)]">00:43</span>
+                  <div className="h-1.5 flex-1 rounded-full bg-white/10">
+                    <div className="h-1.5 w-2/3 rounded-full bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)]" />
+                  </div>
+                  <span className="text-xs font-medium text-[rgba(255,255,255,0.74)]">01:30</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -55,10 +93,15 @@ function SnapshotCard({
           <div className="space-y-2">
             <div className="h-3 w-3/4 rounded-full bg-white/70" />
             <div className="h-3 w-1/2 rounded-full bg-white/55" />
-            <div className="grid grid-cols-3 gap-2 pt-3">
-              <div className="h-12 rounded-2xl bg-white/18" />
-              <div className="h-12 rounded-2xl bg-white/18" />
-              <div className="h-12 rounded-2xl bg-white/18" />
+            <div className="pt-3">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="h-10 rounded-2xl bg-white/18" />
+                <div className="h-10 rounded-2xl bg-white/18" />
+                <div className="h-10 rounded-2xl bg-white/18" />
+              </div>
+              <div className="mt-3 h-1.5 rounded-full bg-white/16">
+                <div className="h-1.5 w-1/2 rounded-full bg-white/68" />
+              </div>
             </div>
           </div>
         </div>

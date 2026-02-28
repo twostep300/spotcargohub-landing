@@ -1,12 +1,10 @@
 import { Button, primaryCtaLabel } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-
 export function HowItWorksSection() {
   const steps = [
-    ["1. Anfrage erstellen", "Transportart, Route, Anforderungen, Zeitfenster."],
-    ["2. Speditionskreis waehlen", "Bestehende Partner einladen oder Matching nutzen."],
-    ["3. Angebote vergleichen", "Strukturiert, filterbar, nachvollziehbar."],
-    ["4. Vergeben & dokumentieren", "Vergabe mit Begruendung, Archiv inklusive."],
+    ["Step 1", "Anfrage erstellen"],
+    ["Step 2", "Speditionskreis waehlen"],
+    ["Step 3", "Angebote vergleichen"],
+    ["Step 4", "Vergeben"],
   ];
 
   return (
@@ -15,12 +13,22 @@ export function HowItWorksSection() {
         <h2 className="text-3xl font-semibold tracking-[-0.03em] text-[var(--color-ink)] md:text-5xl">
           So funktioniert&apos;s in 4 Schritten
         </h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {steps.map(([title, copy]) => (
-            <Card className="p-6" key={title}>
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[var(--color-brand)]">{title}</p>
-              <p className="mt-4 text-base leading-8 text-[var(--color-ink-soft)]">{copy}</p>
-            </Card>
+        <div className="mt-8 grid gap-4 md:grid-cols-4">
+          {steps.map(([label, title], index) => (
+            <div
+              className="rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-white px-5 py-5 shadow-[var(--shadow-sm)]"
+              key={label}
+            >
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)] text-sm font-bold text-[var(--color-ink)]">
+                  {index + 1}
+                </span>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-muted)]">{label}</p>
+                  <p className="mt-1 text-sm font-semibold text-[var(--color-ink)]">{title}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
         <div className="mt-8">

@@ -5,6 +5,23 @@ type CaseStudiesSectionProps = {
   onOpenCaseModal: () => void;
 };
 
+function CaseVisual({ dark = false }: { dark?: boolean }) {
+  return (
+    <div className={`rounded-3xl p-4 ${dark ? "bg-[rgba(255,255,255,0.06)]" : "bg-[var(--color-surface)]"}`}>
+      <div className="grid grid-cols-3 gap-2">
+        <div className={`h-12 rounded-2xl ${dark ? "bg-white/10" : "bg-white"}`} />
+        <div className={`h-12 rounded-2xl ${dark ? "bg-white/10" : "bg-white"}`} />
+        <div className={`h-12 rounded-2xl ${dark ? "bg-white/10" : "bg-white"}`} />
+      </div>
+      <div className={`mt-4 rounded-3xl p-4 ${dark ? "bg-white/5" : "bg-white"}`}>
+        <div className={`h-3 w-3/4 rounded-full ${dark ? "bg-white/50" : "bg-[rgba(23,19,16,0.18)]"}`} />
+        <div className={`mt-2 h-3 w-1/2 rounded-full ${dark ? "bg-white/30" : "bg-[rgba(23,19,16,0.12)]"}`} />
+        <div className="mt-4 h-20 rounded-2xl bg-[linear-gradient(135deg,_rgba(254,195,58,0.22)_0%,_rgba(239,139,44,0.18)_100%)]" />
+      </div>
+    </div>
+  );
+}
+
 export function CaseStudiesSection({ onOpenCaseModal }: CaseStudiesSectionProps) {
   const cases = [
     {
@@ -39,6 +56,9 @@ export function CaseStudiesSection({ onOpenCaseModal }: CaseStudiesSectionProps)
                 <p className={`mt-4 text-sm leading-7 ${index === 0 ? "text-[rgba(255,255,255,0.78)]" : "text-[var(--color-ink-soft)]"}`}>
                   Ausgangslage: {item.situation}
                 </p>
+                <div className="mt-5">
+                  <CaseVisual dark={index === 0} />
+                </div>
               </div>
               <div className={`grid gap-3 px-6 pb-2 sm:grid-cols-3 ${index === 0 ? "bg-[rgba(255,255,255,0.03)]" : ""}`}>
                 {item.kpis.map((kpi) => (
