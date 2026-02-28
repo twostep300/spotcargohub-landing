@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 function VideoStyleCard() {
   return (
     <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-[linear-gradient(135deg,_#1d1712_0%,_#2b2219_55%,_#7f4a1b_100%)] text-white shadow-[var(--shadow-md)]">
@@ -22,12 +20,50 @@ function VideoStyleCard() {
                 Eine Demo-Ansicht wie in einem echten Backend: Anfrage, Angebotsvergleich und Vergabe in einem klaren Flow.
               </p>
             </div>
-            <div className="rounded-[26px] border border-[rgba(255,255,255,0.12)] bg-[rgba(10,8,7,0.38)] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
-              <img
-                alt="Videoposter einer Demo-Ansicht im Backend-Stil"
-                className="h-auto w-full rounded-[20px] object-cover"
-                src="/graphics/video-poster-16-9.png"
-              />
+            <div className="rounded-[26px] border border-[rgba(255,255,255,0.12)] bg-[rgba(10,8,7,0.38)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex gap-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-white/80" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-white/30" />
+                </div>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[rgba(255,255,255,0.56)]">
+                  Demo Player
+                </span>
+              </div>
+              <div className="rounded-3xl bg-[rgba(255,255,255,0.04)] p-4">
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {["Anfrage", "Angebote", "Vergabe"].map((item) => (
+                    <div className="rounded-2xl bg-[rgba(255,255,255,0.08)] px-3 py-3 text-center text-xs font-semibold uppercase tracking-[0.14em]" key={item}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 grid gap-3 lg:grid-cols-[0.9fr_1.1fr]">
+                  <div className="space-y-3 rounded-2xl bg-[rgba(255,255,255,0.05)] p-3">
+                    <div className="h-3 w-3/4 rounded-full bg-white/70" />
+                    <div className="h-3 w-2/3 rounded-full bg-white/40" />
+                    <div className="h-22 rounded-2xl bg-[linear-gradient(180deg,_rgba(255,255,255,0.08)_0%,_rgba(255,255,255,0.03)_100%)]" />
+                  </div>
+                  <div className="space-y-2 rounded-2xl bg-[rgba(255,255,255,0.05)] p-3">
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="h-12 rounded-2xl bg-white/10" />
+                      <div className="h-12 rounded-2xl bg-white/10" />
+                      <div className="h-12 rounded-2xl bg-white/10" />
+                    </div>
+                    <div className="h-3 rounded-full bg-white/50" />
+                    <div className="h-3 w-5/6 rounded-full bg-white/35" />
+                    <div className="h-3 w-2/3 rounded-full bg-white/25" />
+                  </div>
+                </div>
+                <div className="mt-4 flex items-center gap-3">
+                  <span className="text-xs font-medium text-[rgba(255,255,255,0.74)]">00:43</span>
+                  <div className="h-1.5 flex-1 rounded-full bg-white/10">
+                    <div className="h-1.5 w-2/3 rounded-full bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)]" />
+                  </div>
+                  <span className="text-xs font-medium text-[rgba(255,255,255,0.74)]">01:30</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -57,33 +93,52 @@ function SnapshotCard({
             <span className="h-2.5 w-2.5 rounded-full bg-white/30" />
           </div>
           {kind === "mail" ? (
-            <svg className="h-full w-full" fill="none" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg">
-              <rect x="12" y="24" width="196" height="34" rx="14" fill="rgba(255,255,255,0.16)" />
-              <rect x="26" y="36" width="26" height="10" rx="5" fill="rgba(255,255,255,0.32)" />
-              <rect x="64" y="34" width="88" height="6" rx="3" fill="rgba(255,255,255,0.68)" />
-              <rect x="64" y="44" width="54" height="6" rx="3" fill="rgba(255,255,255,0.38)" />
-              <rect x="12" y="68" width="196" height="34" rx="14" fill="rgba(255,255,255,0.16)" />
-              <rect x="26" y="80" width="26" height="10" rx="5" fill="rgba(255,255,255,0.32)" />
-              <rect x="64" y="78" width="102" height="6" rx="3" fill="rgba(255,255,255,0.68)" />
-              <rect x="64" y="88" width="64" height="6" rx="3" fill="rgba(255,255,255,0.38)" />
-              <path d="M20 118H200" stroke="rgba(255,255,255,0.18)" strokeLinecap="round" strokeWidth="6" />
-              <path d="M20 118H108" stroke="rgba(255,255,255,0.68)" strokeLinecap="round" strokeWidth="6" />
-            </svg>
+            <div className="space-y-3">
+              <div className="rounded-2xl bg-white/14 p-3">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-xl bg-white/22" />
+                  <div className="flex-1 space-y-2">
+                    <div className="h-2.5 w-2/3 rounded-full bg-white/68" />
+                    <div className="h-2.5 w-1/2 rounded-full bg-white/40" />
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-white/14 p-3">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-xl bg-white/22" />
+                  <div className="flex-1 space-y-2">
+                    <div className="h-2.5 w-3/4 rounded-full bg-white/68" />
+                    <div className="h-2.5 w-1/3 rounded-full bg-white/40" />
+                  </div>
+                </div>
+              </div>
+              <div className="h-1.5 rounded-full bg-white/16">
+                <div className="h-1.5 w-2/5 rounded-full bg-white/68" />
+              </div>
+            </div>
           ) : (
-            <svg className="h-full w-full" fill="none" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="22" width="58" height="28" rx="12" fill="rgba(255,255,255,0.18)" />
-              <rect x="81" y="22" width="58" height="28" rx="12" fill="rgba(255,255,255,0.18)" />
-              <rect x="152" y="22" width="58" height="28" rx="12" fill="rgba(255,255,255,0.18)" />
-              <rect x="10" y="64" width="200" height="44" rx="18" fill="rgba(255,255,255,0.14)" />
-              <rect x="28" y="78" width="42" height="8" rx="4" fill="rgba(255,255,255,0.6)" />
-              <rect x="86" y="78" width="42" height="8" rx="4" fill="rgba(255,255,255,0.38)" />
-              <rect x="144" y="78" width="42" height="8" rx="4" fill="rgba(255,255,255,0.3)" />
-              <rect x="28" y="92" width="42" height="8" rx="4" fill="rgba(255,255,255,0.32)" />
-              <rect x="86" y="92" width="42" height="8" rx="4" fill="rgba(255,255,255,0.62)" />
-              <rect x="144" y="92" width="42" height="8" rx="4" fill="rgba(255,255,255,0.28)" />
-              <path d="M18 122H202" stroke="rgba(255,255,255,0.18)" strokeLinecap="round" strokeWidth="6" />
-              <path d="M18 122H134" stroke="rgba(255,255,255,0.68)" strokeLinecap="round" strokeWidth="6" />
-            </svg>
+            <div className="space-y-3">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="h-10 rounded-2xl bg-white/18" />
+                <div className="h-10 rounded-2xl bg-white/18" />
+                <div className="h-10 rounded-2xl bg-white/18" />
+              </div>
+              <div className="rounded-2xl bg-white/14 p-3">
+                <div className="grid grid-cols-3 gap-2">
+                  <div className="h-3 rounded-full bg-white/65" />
+                  <div className="h-3 rounded-full bg-white/45" />
+                  <div className="h-3 rounded-full bg-white/35" />
+                </div>
+                <div className="mt-3 grid grid-cols-3 gap-2">
+                  <div className="h-3 rounded-full bg-white/45" />
+                  <div className="h-3 rounded-full bg-white/65" />
+                  <div className="h-3 rounded-full bg-white/35" />
+                </div>
+              </div>
+              <div className="h-1.5 rounded-full bg-white/16">
+                <div className="h-1.5 w-3/5 rounded-full bg-white/68" />
+              </div>
+            </div>
           )}
         </div>
       </div>
@@ -120,7 +175,7 @@ export function LogisticsVisualsSection() {
               accent="bg-[linear-gradient(135deg,_#3a2b1f_0%,_#7a4d27_55%,_#ffdf95_100%)]"
               copy="Transparenz wirkt besser, wenn Preise, Historie und Vergabe nicht in mehreren Dateien verstreut sind."
               kind="table"
-              title="Ein Blick statt mehr Tabellen"
+              title="Ein Blick statt mehrere Tabellen"
             />
           </div>
         </div>

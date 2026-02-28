@@ -1,7 +1,6 @@
 import type { HeroVariant } from "@/styles/tokens";
 import { Button, primaryCtaLabel } from "@/components/ui/button";
-
-/* eslint-disable @next/next/no-img-element */
+import { DashboardMock } from "@/components/sections/dashboard-mock";
 
 const heroContent = {
   A: {
@@ -55,19 +54,7 @@ export function Hero({ heroVariant }: { heroVariant: HeroVariant }) {
             Fuer Einkaufs- und Logistikteams im industriellen Mittelstand.
           </p>
         </div>
-        <div className="relative">
-          <img
-            alt="SpotCargoHub Produktvisual fuer digitales Tagespreismanagement"
-            className="relative z-10 h-auto w-full rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-white shadow-[var(--shadow-md)]"
-            src="/graphics/hero-produktvisual.png"
-          />
-          <img
-            alt=""
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-6 -top-6 z-0 h-40 w-40 opacity-18"
-            src="/graphics/hintergrund-elemente.png"
-          />
-        </div>
+        <DashboardMock />
       </div>
     </section>
   );

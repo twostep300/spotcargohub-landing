@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-/* eslint-disable @next/next/no-img-element */
-
 type CaseStudiesSectionProps = {
   onOpenCaseModal: () => void;
 };
@@ -65,21 +63,12 @@ export function CaseStudiesSection({ onOpenCaseModal }: CaseStudiesSectionProps)
                   <CaseVisual dark={index === 0} />
                 </div>
               </div>
-              <div className={`grid gap-4 px-6 pb-2 sm:grid-cols-[1.1fr_0.9fr] ${index === 0 ? "bg-[rgba(255,255,255,0.03)]" : ""}`}>
-                <div className="grid gap-3 sm:grid-cols-3">
-                  {item.kpis.map((kpi) => (
-                    <div className={`rounded-2xl px-4 py-4 text-center text-sm font-semibold ${index === 0 ? "bg-[rgba(255,255,255,0.08)] text-white" : "bg-[var(--color-surface)] text-[var(--color-ink)]"}`} key={kpi}>
-                      {kpi}
-                    </div>
-                  ))}
-                </div>
-                <div className={`rounded-3xl p-3 ${index === 0 ? "bg-[rgba(255,255,255,0.06)]" : "bg-[var(--color-surface)]"}`}>
-                  <img
-                    alt="KPI-Badges fuer Case Study Ergebnisse"
-                    className="h-full w-full rounded-2xl object-cover"
-                    src="/graphics/kpi-badges.png"
-                  />
-                </div>
+              <div className={`grid gap-3 px-6 pb-2 sm:grid-cols-3 ${index === 0 ? "bg-[rgba(255,255,255,0.03)]" : ""}`}>
+                {item.kpis.map((kpi) => (
+                  <div className={`rounded-2xl px-4 py-4 text-center text-sm font-semibold ${index === 0 ? "bg-[rgba(255,255,255,0.08)] text-white" : "bg-[var(--color-surface)] text-[var(--color-ink)]"}`} key={kpi}>
+                    {kpi}
+                  </div>
+                ))}
               </div>
               <div className="p-6">
                 <blockquote className={`border-l-2 pl-4 text-base italic ${index === 0 ? "border-[var(--color-accent)] text-white" : "border-[var(--color-accent)] text-[var(--color-ink)]"}`}>
