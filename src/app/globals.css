@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #171310;
+  --color-ink-soft: #4a3b2e;
+  --color-surface: #f6efe4;
+  --color-line: #e7d8c4;
+  --color-brand: #171310;
+  --color-brand-hover: #2a221c;
+  --color-accent: #f5cc57;
+  --color-accent-strong: #ef8b2c;
+  --color-muted: #7a6757;
+  --color-success: #b66a1e;
+  --shadow-sm: 0 10px 30px rgba(23, 19, 16, 0.06);
+  --shadow-md: 0 18px 50px rgba(23, 19, 16, 0.1);
+  --shadow-glow: 0 18px 40px rgba(239, 139, 44, 0.18);
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --section-space: clamp(4rem, 7vw, 7rem);
+  --container-width: min(1120px, calc(100vw - 2rem));
+  --button-height: 52px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.field {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--color-line);
+  background: white;
+  color: var(--color-ink);
+  min-height: 52px;
+  padding: 0 1rem;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 4px rgba(239, 139, 44, 0.14);
+}
