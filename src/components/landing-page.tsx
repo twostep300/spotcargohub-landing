@@ -5,6 +5,7 @@ import type { HeroVariant } from "@/styles/tokens";
 import { Topbar } from "@/components/sections/topbar";
 import { Hero } from "@/components/sections/hero";
 import { SocialProof } from "@/components/sections/social-proof";
+import { LogisticsVisualsSection } from "@/components/sections/logistics-visuals";
 import { PainSection } from "@/components/sections/pain";
 import { SolutionSection } from "@/components/sections/solution";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
@@ -47,15 +48,16 @@ export function LandingPage({ heroVariant }: LandingPageProps) {
       <main>
         <Hero heroVariant={heroVariant} />
         <SocialProof />
+        <LogisticsVisualsSection />
         <PainSection />
         <CtaBand
-          description="Direkt nach dem Problemblock steht der naechste klare Schritt: Demo buchen oder Test starten."
+          description="Ein klarer, digitaler Standard spart Zeit und reduziert operative Reibung."
           title="Weg von Mail-Ketten, hin zu einem klaren Prozess."
         />
         <SolutionSection />
         <HowItWorksSection />
         <CtaBand
-          description="Nach dem Ablauf folgt der naechste Conversion-Punkt mit identischer Handlungslogik."
+          description="Wenn der Ablauf klar ist, wird die Entscheidung deutlich einfacher."
           title="Struktur im Prozess zahlt direkt auf Tempo und Nachvollziehbarkeit ein."
         />
         <FeaturesSection />
@@ -65,7 +67,7 @@ export function LandingPage({ heroVariant }: LandingPageProps) {
           setCaseModalOpen(true);
         }} />
         <CtaBand
-          description="Case-Beispiele liefern Kontext, der CTA macht den naechsten Schritt sofort verfuegbar."
+          description="Praxisbeispiele schaffen Vertrauen und machen den Test greifbarer."
           title="Wenn die Richtung passt, lohnt sich der direkte Blick in Ihren Workflow."
         />
         <TestimonialSection />
@@ -76,7 +78,7 @@ export function LandingPage({ heroVariant }: LandingPageProps) {
         />
         <FaqSection />
         <CtaBand
-          description="Auch nach den FAQs bleibt die Conversion sichtbar und ohne Medienbruch erreichbar."
+          description="Der naechste Schritt bleibt bewusst einfach und ohne Reibung."
           title="Noch offen? Dann starten Sie Ihren Test in 5 Minuten."
         />
         <FinalCtaSection />
