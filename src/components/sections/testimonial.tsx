@@ -14,7 +14,7 @@ export function TestimonialSection() {
                 <img
                   alt="Testimonial Portrait"
                   className="mx-auto h-24 w-24 rounded-full border-4 border-white object-cover shadow-[var(--shadow-sm)]"
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+                  src="/graphics/testimonial-portrait.png"
                 />
                 <div className="mx-auto mt-5 inline-flex rounded-full bg-white px-4 py-2 shadow-[var(--shadow-sm)]">
                   <img
