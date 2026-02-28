@@ -1,36 +1,22 @@
-import { Card } from "@/components/ui/card";
-
 export function FeaturesSection() {
   const features = [
     {
       title: "Strukturierte Angebotsverwaltung",
       copy: "Alle Angebote sauber an einem Ort.",
-      bullets: ["Filter & Vergleich", "Status & Notizen"],
+      kicker: "Vergleich",
+      accent: "bg-[linear-gradient(135deg,_#171310_0%,_#483526_60%,_#ef8b2c_100%)] text-white",
     },
     {
       title: "Speditionskreis & Netzwerk",
       copy: "Arbeiten Sie mit Ihren Partnern - ohne Medienbruch.",
-      bullets: ["Einladen", "Matching optional"],
+      kicker: "Netzwerk",
+      accent: "bg-[linear-gradient(135deg,_#ef8b2c_0%,_#fec33a_100%)] text-[var(--color-ink)]",
     },
     {
       title: "Revisionssichere Dokumentation",
       copy: "Nachvollziehbarkeit fuer Einkauf & Management.",
-      bullets: ["Archiv", "Vergabehistorie"],
-    },
-    {
-      title: "Schneller Start",
-      copy: "Kein monatelanges IT-Projekt.",
-      bullets: ["Setup in Tagen", "Onboarding unterstuetzt"],
-    },
-    {
-      title: "Integration-ready",
-      copy: "CSV/API optional - wenn Sie es brauchen.",
-      bullets: ["Daten exportierbar", "Schnittstellen vorbereitbar"],
-    },
-    {
-      title: "Sicherheit & Vertraulichkeit",
-      copy: "B2B-Standards, Zugriffskontrolle, klare Rollen.",
-      bullets: ["Rollen", "Zugriffsrechte"],
+      kicker: "Kontrolle",
+      accent: "bg-[linear-gradient(135deg,_#fffdf9_0%,_#f6efe4_100%)] text-[var(--color-ink)] border border-[var(--color-line)]",
     },
   ];
 
@@ -40,22 +26,19 @@ export function FeaturesSection() {
         <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-[var(--color-ink)] md:text-5xl">
           Das bekommen Sie im Alltag wirklich
         </h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {features.map((feature) => (
-            <Card className="p-6" key={feature.title}>
-              <h3 className="text-xl font-semibold text-[var(--color-ink)]">{feature.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-[var(--color-ink-soft)]">{feature.copy}</p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {feature.bullets.map((bullet) => (
-                  <span
-                    className="rounded-full bg-[var(--color-surface)] px-3 py-1 text-xs font-semibold text-[var(--color-brand)]"
-                    key={bullet}
-                  >
-                    {bullet}
-                  </span>
-                ))}
+            <div className={`rounded-[var(--radius-lg)] p-6 shadow-[var(--shadow-sm)] ${feature.accent}`} key={feature.title}>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-75">{feature.kicker}</p>
+              <div className="mt-10 min-h-36">
+                <h3 className="text-2xl font-semibold tracking-[-0.03em]">{feature.title}</h3>
+                <p className="mt-4 text-sm leading-7 opacity-85">{feature.copy}</p>
               </div>
-            </Card>
+              <div className="mt-8 flex items-center justify-between">
+                <span className="text-xs font-semibold uppercase tracking-[0.16em] opacity-70">Im Tagesgeschaeft</span>
+                <span className="text-xl">↗</span>
+              </div>
+            </div>
           ))}
         </div>
       </div>

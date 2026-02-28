@@ -226,13 +226,12 @@ export function PricingSection() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-[var(--color-surface)] px-6 py-6">
+        <div className="mt-6 rounded-[var(--radius-md)] border border-[var(--color-line)] bg-[var(--color-surface)] px-5 py-4">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-base font-semibold text-[var(--color-ink)]">30 Tage kostenfrei und unverbindlich testen</p>
-              <p className="mt-2 text-sm leading-7 text-[var(--color-ink-soft)]">
-                Ohne Kreditkarte. Ohne lange Bindung. Starten Sie in wenigen Minuten und pruefen Sie den Workflow im
-                echten Tagesgeschaeft.
+              <p className="mt-1 text-sm leading-6 text-[var(--color-ink-soft)]">
+                Ohne Kreditkarte. Ohne lange Bindung.
               </p>
             </div>
             <Button href="#booking">{primaryCtaLabel}</Button>

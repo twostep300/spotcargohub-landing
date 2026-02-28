@@ -18,31 +18,6 @@ export function FaqSection() {
       answer:
         "Typisch LKW, Luft und See - je nach Setup. Details klaeren wir in der Demo.",
     },
-    {
-      question: "Wie schnell sind wir live?",
-      answer:
-        "Oft innerhalb weniger Tage - abhaengig von Abstimmungen und Nutzerkreis.",
-    },
-    {
-      question: "Wie funktioniert Matching?",
-      answer:
-        "Sie definieren Kriterien und Partnerkreis. Matching unterstuetzt bei der Auswahl - Sie behalten die Kontrolle.",
-    },
-    {
-      question: "Wie laeuft die Testphase?",
-      answer:
-        "Sie testen den Workflow in einem klaren Rahmen. Danach entscheiden Sie, ob es passt.",
-    },
-    {
-      question: "Was ist mit Datenschutz und Vertraulichkeit?",
-      answer:
-        "B2B-Standards, klare Rollen, Zugriffskontrolle. Details koennen im Security Fact Sheet dokumentiert werden.",
-    },
-    {
-      question: "Gibt es Schnittstellen?",
-      answer:
-        "Ja, je nach Bedarf (z.B. CSV/API). Wir besprechen das pragmatisch in der Demo.",
-    },
   ];
 
   return (
@@ -51,7 +26,7 @@ export function FaqSection() {
         <h2 className="text-3xl font-semibold tracking-[-0.03em] text-[var(--color-ink)] md:text-5xl">
           Haeufige Fragen
         </h2>
-        <div className="mt-8">
+        <div className="mt-8 max-w-4xl">
           <Accordion items={items} />
         </div>
         <div className="mt-8">
