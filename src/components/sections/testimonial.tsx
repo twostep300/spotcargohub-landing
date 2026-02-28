@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { Card } from "@/components/ui/card";
 
 export function TestimonialSection() {
@@ -9,11 +11,17 @@ export function TestimonialSection() {
           <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="flex items-center justify-center bg-[linear-gradient(135deg,_#ef8b2c_0%,_#fec33a_100%)] p-8">
               <div className="text-center">
-                <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white text-3xl font-bold text-[var(--color-ink)] shadow-[var(--shadow-sm)]">
-                  CL
-                </div>
-                <div className="mx-auto mt-5 inline-flex rounded-full bg-[rgba(23,19,16,0.12)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-ink)]">
-                  Firmenlogo
+                <img
+                  alt="Testimonial Portrait"
+                  className="mx-auto h-24 w-24 rounded-full border-4 border-white object-cover shadow-[var(--shadow-sm)]"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+                />
+                <div className="mx-auto mt-5 inline-flex rounded-full bg-white px-4 py-2 shadow-[var(--shadow-sm)]">
+                  <img
+                    alt="Firmenlogo Platzhalter"
+                    className="h-5 w-auto opacity-85"
+                    src="https://cdn.simpleicons.org/siemens/171310"
+                  />
                 </div>
               </div>
             </div>

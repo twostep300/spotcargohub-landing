@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
+
 const brands = [
-  "BASF",
-  "BOSCH",
-  "SIEMENS",
-  "DHL",
-  "DB SCHENKER",
-  "MAERSK",
+  { name: "DHL", src: "https://cdn.simpleicons.org/dhl/171310" },
+  { name: "Bosch", src: "https://cdn.simpleicons.org/bosch/171310" },
+  { name: "Siemens", src: "https://cdn.simpleicons.org/siemens/171310" },
+  { name: "Airbus", src: "https://cdn.simpleicons.org/airbus/171310" },
+  { name: "Volkswagen", src: "https://cdn.simpleicons.org/volkswagen/171310" },
+  { name: "Maersk", src: "https://cdn.simpleicons.org/maersk/171310" },
 ];
 
 export function SocialProof() {
@@ -18,11 +20,14 @@ export function SocialProof() {
           {brands.map((brand) => (
             <div
               className="flex min-h-20 items-center justify-center rounded-2xl border border-[rgba(231,216,196,0.8)] bg-white px-5 py-5"
-              key={brand}
+              key={brand.name}
             >
-              <span className="text-base font-extrabold tracking-[0.22em] text-[rgba(23,19,16,0.78)]">
-                {brand}
-              </span>
+              <img
+                alt={`${brand.name} Logo`}
+                className="h-9 w-auto max-w-[8rem] object-contain opacity-85"
+                loading="lazy"
+                src={brand.src}
+              />
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 function VideoStyleCard() {
   return (
     <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-[linear-gradient(135deg,_#1d1712_0%,_#2b2219_55%,_#7f4a1b_100%)] text-white shadow-[var(--shadow-md)]">
-      <div className="relative aspect-[16/10] p-6">
+      <div className="relative aspect-[15/9] p-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,_rgba(254,195,58,0.25),_transparent_20%),radial-gradient(circle_at_20%_70%,_rgba(255,223,149,0.12),_transparent_25%)]" />
         <div className="relative flex h-full flex-col justify-between">
           <div className="flex items-center justify-between">
@@ -10,13 +10,13 @@ function VideoStyleCard() {
             </span>
             <span className="text-xs font-medium text-[rgba(255,255,255,0.7)]">90 Sek. Produktblick</span>
           </div>
-          <div className="grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
-              <div className="flex h-18 w-18 items-center justify-center rounded-full bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)] text-[var(--color-ink)] shadow-[var(--shadow-glow)]">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[linear-gradient(135deg,_#FEC33A_0%,_#FFDF95_100%)] text-[var(--color-ink)] shadow-[var(--shadow-glow)]">
                 <span className="ml-1 text-2xl">▶</span>
               </div>
-              <p className="mt-5 text-2xl font-semibold tracking-[-0.03em]">Wie der Prozess in der Praxis aussieht</p>
-              <p className="mt-2 max-w-md text-sm leading-7 text-[rgba(255,255,255,0.78)]">
+              <p className="mt-4 text-xl font-semibold tracking-[-0.03em]">Wie der Prozess in der Praxis aussieht</p>
+              <p className="mt-2 max-w-md text-sm leading-6 text-[rgba(255,255,255,0.78)]">
                 Eine Demo-Ansicht wie in einem echten Backend: Anfrage, Angebotsvergleich und Vergabe in einem klaren Flow.
               </p>
             </div>
@@ -76,10 +76,12 @@ function SnapshotCard({
   title,
   copy,
   accent,
+  kind,
 }: {
   title: string;
   copy: string;
   accent: string;
+  kind: "mail" | "table";
 }) {
   return (
     <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-white shadow-[var(--shadow-sm)]">
@@ -90,20 +92,54 @@ function SnapshotCard({
             <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/30" />
           </div>
-          <div className="space-y-2">
-            <div className="h-3 w-3/4 rounded-full bg-white/70" />
-            <div className="h-3 w-1/2 rounded-full bg-white/55" />
-            <div className="pt-3">
+          {kind === "mail" ? (
+            <div className="space-y-3">
+              <div className="rounded-2xl bg-white/14 p-3">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-xl bg-white/22" />
+                  <div className="flex-1 space-y-2">
+                    <div className="h-2.5 w-2/3 rounded-full bg-white/68" />
+                    <div className="h-2.5 w-1/2 rounded-full bg-white/40" />
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-white/14 p-3">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-xl bg-white/22" />
+                  <div className="flex-1 space-y-2">
+                    <div className="h-2.5 w-3/4 rounded-full bg-white/68" />
+                    <div className="h-2.5 w-1/3 rounded-full bg-white/40" />
+                  </div>
+                </div>
+              </div>
+              <div className="h-1.5 rounded-full bg-white/16">
+                <div className="h-1.5 w-2/5 rounded-full bg-white/68" />
+              </div>
+            </div>
+          ) : (
+            <div className="space-y-3">
               <div className="grid grid-cols-3 gap-2">
                 <div className="h-10 rounded-2xl bg-white/18" />
                 <div className="h-10 rounded-2xl bg-white/18" />
                 <div className="h-10 rounded-2xl bg-white/18" />
               </div>
-              <div className="mt-3 h-1.5 rounded-full bg-white/16">
-                <div className="h-1.5 w-1/2 rounded-full bg-white/68" />
+              <div className="rounded-2xl bg-white/14 p-3">
+                <div className="grid grid-cols-3 gap-2">
+                  <div className="h-3 rounded-full bg-white/65" />
+                  <div className="h-3 rounded-full bg-white/45" />
+                  <div className="h-3 rounded-full bg-white/35" />
+                </div>
+                <div className="mt-3 grid grid-cols-3 gap-2">
+                  <div className="h-3 rounded-full bg-white/45" />
+                  <div className="h-3 rounded-full bg-white/65" />
+                  <div className="h-3 rounded-full bg-white/35" />
+                </div>
+              </div>
+              <div className="h-1.5 rounded-full bg-white/16">
+                <div className="h-1.5 w-3/5 rounded-full bg-white/68" />
               </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
       <div className="p-5">
@@ -132,11 +168,13 @@ export function LogisticsVisualsSection() {
             <SnapshotCard
               accent="bg-[linear-gradient(135deg,_#ef8b2c_0%,_#fec33a_100%)]"
               copy="Weniger Rueckfragen, wenn Anforderungen, Status und Antworten im selben Ablauf sichtbar sind."
+              kind="mail"
               title="Klare Anfrage statt Mail-Pingpong"
             />
             <SnapshotCard
               accent="bg-[linear-gradient(135deg,_#3a2b1f_0%,_#7a4d27_55%,_#ffdf95_100%)]"
               copy="Transparenz wirkt besser, wenn Preise, Historie und Vergabe nicht in mehreren Dateien verstreut sind."
+              kind="table"
               title="Ein Blick statt mehrere Tabellen"
             />
           </div>

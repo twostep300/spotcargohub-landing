@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 
 export function PainSection() {
   const items = [
-    ["E-Mail-Ketten mit unklaren Versionen", "Excel-Vergleich und manuelle Nacharbeit"],
-    ["Rueckfragen, fehlende Daten, Verzoegerungen", "Angebote sind schwer vergleichbar"],
-    ["Vergaben passieren unter Zeitdruck", "Kein sauberes Archiv und keine Nachvollziehbarkeit"],
+    ["✉", "E-Mail-Ketten mit unklaren Versionen", "Excel-Vergleich und manuelle Nacharbeit"],
+    ["⏱", "Rueckfragen, fehlende Daten, Verzoegerungen", "Angebote sind schwer vergleichbar"],
+    ["⚠", "Vergaben passieren unter Zeitdruck", "Kein sauberes Archiv und keine Nachvollziehbarkeit"],
   ];
 
   return (
     <section className="py-[var(--section-space)]" id="vorteile">
-      <div className="mx-auto grid w-[var(--container-width)] gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <div className="mx-auto grid w-[var(--container-width)] gap-8 lg:grid-cols-[1fr_1fr] lg:items-stretch">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-brand)]">Pain Point</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-[var(--color-ink)] md:text-5xl">
@@ -44,14 +44,14 @@ export function PainSection() {
           </div>
         </div>
         <div className="grid gap-4">
-          {items.map(([primary, secondary]) => (
+          {items.map(([icon, primary, secondary]) => (
             <div
               className="rounded-[var(--radius-lg)] border border-[var(--color-line)] bg-white p-5 shadow-[var(--shadow-sm)]"
               key={primary}
             >
               <div className="flex items-start gap-4">
-                <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[rgba(245,204,87,0.24)] text-sm font-bold text-[var(--color-brand)]">
-                  !
+                <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[rgba(245,204,87,0.24)] text-base font-bold text-[var(--color-brand)]">
+                  {icon}
                 </span>
                 <div className="space-y-3">
                   <p className="text-sm font-semibold leading-6 text-[var(--color-ink)]">{primary}</p>
